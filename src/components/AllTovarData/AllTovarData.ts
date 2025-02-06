@@ -1,5 +1,6 @@
 let AllTovarData = {
     coffee: [
+        // commit review
         {
             name: "coffeeCard 1",
             id: 1, // всегда циферка может строка но ифра
