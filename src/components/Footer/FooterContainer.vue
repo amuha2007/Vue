@@ -26,6 +26,9 @@
 </template>
 
 <style>
+.ScrollUp{
+    cursor: pointer;
+}
 .Footer{
     text-align: center;
 }
