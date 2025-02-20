@@ -7,17 +7,33 @@
 <template>
         <h3>Каталоги нашей продукции</h3>
         <div className="Catalogs">
-            <div className="CatalogItem">
+            <div className="CatalogItem" id="catalogItem0">
                 <p>Свежеобжаренный кофе</p>
+                <div className="catalogItemForimg">
+                    <img src="../../public/img/freshCoffeCatalog.png">
+                </div>
+                
             </div>
-            <div className="CatalogItem">
+            <div className="CatalogItem" id="catalogItem1">
                 <p>Чай и кофейные напитки</p>
+                <div className="catalogItemForimg">
+                    <img src="../../public/img/teaAndCoffeeCatalog.png">
+                </div>
+                
             </div>
-            <div className="CatalogItem">
+            <div className="CatalogItem" id="catalogItem2">
                 <p>Здоровое питание</p>
+                <div className="catalogItemForimg">
+                    <img src="../../public/img/HealthuFood.png">
+                </div>
+                
             </div>
-            <div className="CatalogItem">
+            <div className="CatalogItem" id="catalogItem3">
                 <p>Продукция для вендинга</p>
+                <div className="catalogItemForimg">
+                    <img src="../../public/img/VendingProductCatalog.png">
+                </div>
+                
             </div>
         </div>
 </template>
@@ -47,5 +63,13 @@
 
     .CatalogItem:hover{
         box-shadow: rgb(245 191 30) 0px 0px 8px;
+    }
+
+    .catalogItemForimg{
+        height: 80%;
+    display: flex
+;
+    justify-content: center;
+    min-width: 350px;
     }
 </style>

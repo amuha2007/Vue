@@ -4,7 +4,7 @@
                 coffee:[
                 {       
                         name: "coffeeCard 1",
-                        id:'coffeCard_1',
+                        ide:'coffeCard_1',
                         description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                         img: "/img/coffePack.png",
                         price: "1234",
@@ -65,7 +65,7 @@
                 },
                 {
                         name: "coffeeCard 2",
-                        id:'coffeCard_2',
+                        ide:'coffeCard_2',
                         description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                         img: "/img/coffePack.png",
                         price: "1234",
@@ -126,7 +126,7 @@
                 },
                 {
                         name: "coffeeCard 3",
-                        id:'coffeCard_3',
+                        ide:'coffeCard_3',
                         description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                         img: "/img/coffePack.png",
                         price: "1234",
@@ -186,7 +186,7 @@
                 },
                 {
                         name: "coffeeCard 4",
-                        id:'coffeCard_4',
+                        ide:'coffeCard_4',
                         description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                         img: "/img/coffePack.png",
                         price: "1234",
@@ -246,7 +246,7 @@
                 },
                 {
                         name: "coffeeCard 5",
-                        id:'coffeCard_5',
+                        ide:'coffeCard_5',
                         description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                         img: "/img/coffePack.png",
                         price: "1234",
@@ -306,7 +306,7 @@
             },
             {
                     name: "coffeeCard 6",
-                    id:'coffeCard_6',
+                    ide:'coffeCard_6',
                     description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                     img: "/img/coffePack.png",
                     price: "1234",
@@ -366,7 +366,7 @@
             },
             {
                     name: "coffeeCard 7",
-                    id:'coffeCard_7',
+                    ide:'coffeCard_7',
                     description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                     img: "/img/coffePack.png",
                     price: "1234",
@@ -426,7 +426,7 @@
             },
             {
                     name: "coffeeCard 8",
-                    id:'coffeCard_8',
+                    ide:'coffeCard_8',
                     description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                     img: "/img/coffePack.png",
                     price: "1234",
@@ -486,7 +486,7 @@
             },
             {
                     name: "coffeeCard 9",
-                    id:'coffeCard_9',
+                    ide:'coffeCard_9',
                     description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                     img: "/img/coffePack.png",
                     price: "1234",
@@ -546,7 +546,7 @@
             },
             {
                     name: "coffeeCard 10",
-                    id:'coffeCard_10',
+                    ide:'coffeCard_10',
                     description: "Свежеобжаренный кофе - описание товара, вкус, аромат",
                     img: "/img/coffePack.png",
                     price: "1234",
@@ -609,7 +609,7 @@
     tea:[
             {       
             name: "teaCard_black 1",
-            id:'teaCard_black_1',
+            ide:'teaCard_black_1',
             description: "Черный чай 1",
             img: "/img/tea/TeaBlack.png",
             price: "1234",
@@ -653,7 +653,7 @@
         },
         {       
             name: "teaCard_black 2",
-            id:'teaCard_black_2',
+            ide:'teaCard_black_2',
             description: "Черный чай 2",
             img: "/img/tea/TeaBlack.png",
             price: "1234",
@@ -697,7 +697,7 @@
         },
         {       
             name: "teaCard_black 3",
-            id:'teaCard_black_3',
+            ide:'teaCard_black_3',
             description: "Черный чай 3",
             img: "/img/tea/TeaBlack.png",
             price: "1234",
@@ -741,7 +741,7 @@
         },
         {       
             name: "teaCard_black 4",
-            id:'teaCard_black_4',
+            ide:'teaCard_black_4',
             description: "Черный чай 4",
             img: "/img/tea/TeaBlack.png",
             price: "1234",
@@ -754,7 +754,7 @@
         },
         {       
             name: "teaCard_black 5",
-            id:'teaCard_black_5',
+            ide:'teaCard_black_5',
             description: "Черный чай 5",
             img: "/img/tea/TeaBlack.png",
             price: "1234",
@@ -798,7 +798,7 @@
         },
         {       
             name: "teaCard_green 1",
-            id:'teaCard_green_1',
+            ide:'teaCard_green_1',
             description: "Зеленый чай 1",
             img: "/img/tea/TeaGreen.png",
             price: "1234",
@@ -842,7 +842,7 @@
         },
         {       
             name: "teaCard_green 2",
-            id:'teaCard_green_2',
+            ide:'teaCard_green_2',
             description: "Зеленый чай 2",
             img: "/img/tea/TeaGreen.png",
             price: "1234",
@@ -886,7 +886,7 @@
         },
         {       
             name: "teaCard_green 3",
-            id:'teaCard_green_3',
+            ide:'teaCard_green_3',
             description: "Зеленый чай 3",
             img: "/img/tea/TeaGreen.png",
             price: "1234",
@@ -930,7 +930,7 @@
         },
         {       
             name: "teaCard_green 4",
-            id:'teaCard_green_4',
+            ide:'teaCard_green_4',
             description: "Зеленый чай 4",
             img: "/img/tea/TeaGreen.png",
             price: "1234",
@@ -974,7 +974,7 @@
         },
         {       
             name: "teaCard_green 5",
-            id:'teaCard_green_5',
+            ide:'teaCard_green_5',
             description: "Зеленый чай 5",
             img: "/img/tea/TeaGreen.png",
             price: "1234",
@@ -1018,7 +1018,7 @@
         },
         {       
             name: "teaCard_milkUlung 1",
-            id:'teaCard_milkUlung_1',
+            ide:'teaCard_milkUlung_1',
             description: "Молочный улун 1",
             img: "/img/tea/TeaMilkUlun.png",
             price: "1234",
@@ -1062,7 +1062,7 @@
         },
         {       
             name: "teaCard_milkUlung 2",
-            id:'teaCard_milkUlung_2',
+            ide:'teaCard_milkUlung_2',
             description: "Молочный улун 2",
             img: "/img/tea/TeaMilkUlun.png",
             price: "1234",
@@ -1106,7 +1106,7 @@
         },
         {       
             name: "teaCard_milkUlung 3",
-            id:'teaCard_milkUlung_3',
+            ide:'teaCard_milkUlung_3',
             description: "Молочный улун 3",
             img: "/img/tea/TeaMilkUlun.png",
             price: "1234",
@@ -1150,7 +1150,7 @@
         },
         {       
             name: "teaCard_Herb 1",
-            id:'teaCard_Herb_1',
+            ide:'teaCard_Herb_1',
             description: "Травянной чай 1",
             img: "/img/tea/TeaHerb.png",
             price: "1234",
@@ -1194,7 +1194,7 @@
         },
         {       
             name: "teaCard_Herb 2",
-            id:'teaCard_Herb_2',
+            ide:'teaCard_Herb_2',
             description: "Травянной чай 2",
             img: "/img/tea/TeaHerb.png",
             price: "1234",
@@ -1238,7 +1238,7 @@
         },
         {       
             name: "teaCard_Herb 3",
-            id:'teaCard_Herb_3',
+            ide:'teaCard_Herb_3',
             description: "Травянной чай 3",
             img: "/img/tea/TeaHerb.png",
             price: "1234",
@@ -1282,7 +1282,7 @@
         },
         {       
             name: "teaCard_Matcha 1",
-            id:'teaCard_Matcha_1',
+            ide:'teaCard_Matcha_1',
             description: "Матча 1",
             img: "/img/tea/TeaMatcha.png",
             price: "1234",
@@ -1326,7 +1326,7 @@
         },
         {       
             name: "teaCard_Matcha 2",
-            id:'teaCard_Matcha_2',
+            ide:'teaCard_Matcha_2',
             description: "Матча 2",
             img: "/img/tea/TeaMatcha.png",
             price: "1234",
@@ -1370,7 +1370,7 @@
         },
         {       
             name: "teaCard_Matcha 3",
-            id:'teaCard_Matcha_3',
+            ide:'teaCard_Matcha_3',
             description: "Матча 3",
             img: "/img/tea/TeaMatcha.png",
             price: "1234",
@@ -1414,7 +1414,7 @@
         },
         {       
             name: "teaCard_Puer 1",
-            id:'teaCard_Puer_1',
+            ide:'teaCard_Puer_1',
             description: "Пуэр 1",
             img: "/img/tea/TeaPuer.png",
             price: "1234",
@@ -1458,7 +1458,7 @@
         },
         {       
             name: "teaCard_Puer 2",
-            id:'teaCard_Puer_2',
+            ide:'teaCard_Puer_2',
             description: "Пуэр 2",
             img: "/img/tea/TeaPuer.png",
             price: "1234",
@@ -1502,7 +1502,7 @@
         },
         {       
             name: "teaCard_Puer 3",
-            id:'teaCard_Puer_3',
+            ide:'teaCard_Puer_3',
             description: "Пуэр 3",
             img: "/img/tea/TeaPuer.png",
             price: "1234",
@@ -1546,7 +1546,7 @@
         },
         {       
             name: "coffee_drincs 1",
-            id:'coffee_drincs_1',
+            ide:'coffee_drincs_1',
             description: "Кофейные напитки 1",
             img: "/img/tea/CofeeDrinks.png",
             price: "1234",
@@ -1590,7 +1590,7 @@
         },
         {       
             name: "coffee_drincs 2",
-            id:'coffee_drincs_2',
+            ide:'coffee_drincs_2',
             description: "Кофейные напитки 2",
             img: "/img/tea/CofeeDrinks.png",
             price: "1234",
@@ -1634,7 +1634,7 @@
         },
         {       
             name: "coffee_drincs 3",
-            id:'coffee_drincs_3',
+            ide:'coffee_drincs_3',
             description: "Кофейные напитки 3",
             img: "/img/tea/CofeeDrinks.png",
             price: "1234",
@@ -1681,7 +1681,7 @@
     food:[
         {       
             name: "food_1",
-            id:'food_1',
+            ide:'food_1',
             description: "Здоровое питание 1",
             img: "/img/food/healthyFoodImg.png",
             price: "1234",
@@ -1725,7 +1725,7 @@
         },
         {       
             name: "food_2",
-            id:'food_2',
+            ide:'food_2',
             description: "Здоровое питание 2",
             img: "/img/food/healthyFoodImg.png",
             price: "1234",
@@ -1769,7 +1769,7 @@
         },
         {       
             name: "food_3",
-            id:'food_3',
+            ide:'food_3',
             description: "Здоровое питание 3",
             img: "/img/food/healthyFoodImg.png",
             price: "1234",
@@ -1813,7 +1813,7 @@
         },
         {       
             name: "food_4",
-            id:'food_4',
+            ide:'food_4',
             description: "Здоровое питание 4",
             img: "/img/food/healthyFoodImg.png",
             price: "1234",
@@ -1857,7 +1857,7 @@
         },
         {       
             name: "food_5",
-            id:'food_5',
+            ide:'food_5',
             description: "Здоровое питание 5",
             img: "/img/food/healthyFoodImg.png",
             price: "1234",
@@ -1903,7 +1903,7 @@
     vending:[
         {       
             name: "vending_1",
-            id:'vending_1',
+            ide:'vending_1',
             description: "Гранулированный кофе",
             img: "/img/vending/granulated_coffee.png",
             price: "1234",
@@ -1948,7 +1948,7 @@
         },
         {       
             name: "vending_2",
-            id:'vending_2',
+            ide:'vending_2',
             description: "Гранулированный цикорий",
             img: "/img/vending/granulated_cicoriy.png",
             price: "1234",
@@ -1993,7 +1993,7 @@
         },
         {       
             name: "vending_3",
-            id:'vending_3',
+            ide:'vending_3',
             description: "Зерновой кофе",
             img: "/img/vending/cornsCoffee.png",
             price: "1234",
@@ -2038,7 +2038,7 @@
         },
         {       
             name: "vending_4",
-            id:'vending_4',
+            ide:'vending_4',
             description: "Гранулированный какао",
             img: "/img/vending/granul_cacao.png",
             price: `123`,
@@ -2083,7 +2083,7 @@
         },
         {       
             name: "vending_5",
-            id:'vending_5',
+            ide:'vending_5',
             description: "Гранулированные напитки",
             img: "/img/vending/granul_coffee_drinks.png",
             price: `123`,
@@ -2128,7 +2128,7 @@
         },
         {       
             name: "vending_6",
-            id:'vending_6',
+            ide:'vending_6',
             description: "Кофе порошкообразный",
             img: "/img/vending/coffee_powdery.png",
             price: `123`,
@@ -2173,7 +2173,7 @@
         },
         {       
             name: "vending_7",
-            id:'vending_7',
+            ide:'vending_7',
             description: "Сухое молоко гранулированное",
             img: "/img/vending/suhoe-moloko.png",
             price: `123`,
