@@ -1,26 +1,55 @@
 
 <template>
-    <div className="Content">
-          <h2>Свежеобжаренный кофе</h2>
-          <p>Кофе Калининградской обжарки из разных стран
+    <div >
+        <img src="../../../public/img/blot.png" id="blot">
+        <img src="../../../public/img/coffee-breans&cup2.png" id="cup">
+          <h2 className="Content h2 zind1" >Свежеобжаренный кофе</h2>
+          <p className="Content zind1">Кофе Калининградской обжарки из разных стран
             произрастания с доставкой на дом.</p>
-          <p>Мы обжариваем кофе каждые выходные.</p>
+          <p className="Content zind1">Мы обжариваем кофе каждые выходные.</p>
           <CatalogsProd/>
           <Cardswithdiscont/>
           <MainPromo/>
           <Companynews/>
           <OurInstagramm/>
-          <Blogpage/>
+          
         </div>
 </template>
 
 <style>
-.Content>h2{
+
+.zind1{
+    position: relative;
+    z-index: 10;
+}
+
+#blot{
+    position: absolute;
+    top: 0px;
+    max-height: 1100px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.Content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2{
     font-family: Gilroy;
     font-style: normal;
     font-weight: 900;
     font-size: 70px;
     color: #000000;
+}
+
+#cup{
+    position: relative;
+    z-index: 2;
+    left: 50%;
 }
 </style>
 

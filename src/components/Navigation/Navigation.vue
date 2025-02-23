@@ -59,6 +59,8 @@ import NavigationsLinks from './NavigationLinks/NavigationsLinks.vue';
 
 <style>
     .Navigation{
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: space-around;
         align-items: center;

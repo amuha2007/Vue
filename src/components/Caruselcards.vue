@@ -21,40 +21,77 @@ import AllTovarData from './AllTovarData/AllTovarData';
 
 </script>
 
-<template>
-    <h3>Товары со скидкой</h3>
-    <p>Наша компания предлагает покупать товар со скидкой не только в дни распродаж
+<template >
+    <h3 className="container">Товары со скидкой</h3>
+    <p className="container">Наша компания предлагает покупать товар со скидкой не только в дни распродаж
         или в течение действия ограниченных предложений, но и пользоваться скидками постоянно</p>
-    <div className="CaruselContainer">
-        <button><</button>
+    <div className="CaruselContainer container" >
+        <button className="buttonCorusel"><img src="../../public/img/ArrowLeft.png"></button>
+
+        <div className="Corusel">
         <div v-for="(data, index) in itemsWithDiscount() ">
         
         <div v-if="(data.key === 'coffee')">
             
-                <p v-for="(data2) in data.tovars">
+                <div v-for="(data2) in data.tovars">
                     
 
                     <Card :data="data2"/>
-                </p>
+                </div>
 
                 
                 
         </div>
 
         <div v-else > 
-            <p v-for="(data2) in data.tovars">
+            <div v-for="(data2) in data.tovars">
                 
                 
                 <Card :data="data2"/>
-            </p>
+            </div>
         </div>
     </div>
-            
-        <button>></button>
+</div> 
+        <button className="buttonCorusel"><img src="../../public/img/ArrowRight.png"></button>
     </div>
-    <p>смотреть все</p>
+    <p style="text-align: center; cursor: pointer;position: relative; z-index: 1; width: fit-content;margin-left: auto;margin-right: auto;">смотреть все</p>
 </template>
 
 <style>
+    .container{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .buttonCorusel{
+        min-width: 50px;
+    height: 50px;
+    background-color: rgb(249, 179, 0);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center center;
+    border: none;
+    cursor: pointer;
+    }
 
+    .CaruselContainer{
+        display: flex ;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    
+    .Corusel{
+        display: flex;
+        
+        overflow: hidden;
+        padding-top: 24px;
+    }
+    .Corusel>div{
+        display: inherit;
+    }
+    .Corusel>div>div{
+        display: inherit;
+    }
 </style>

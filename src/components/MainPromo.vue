@@ -6,28 +6,46 @@
 
 <template>
     <div className="PromoContainer">
+        <img src="../../public/img/Vector.png" style="margin-bottom: -5px; width: 100%">
         <div className="PromoContainerTop">
-            <p>Picture</p>
+            <div>
+            <img src="../../public/img/CoffeeCornsWithCup2.png" ></img>
             <div >
-                <h3>Почему стоит работать
+                <h3 className="heading">Почему стоит работать
                     именно с нами?</h3>
 
-                    <div>
-                        <div>картинка</div>
-                        <p>Всегда свежая обжарка</p>
-                        <p>Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка</p>
+                    <div className="containerSection">
+                        <div className="containerImg">
+                            <img src="../../public/img/cupIco.png"></img>
+                        </div>
+                        <div>
+                            <p className="contHeader">Всегда свежая обжарка</p>
+                            <p className="text">Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка</p>
+                        </div>
+                        
                     </div>
-                    <div>
-                        <div>картинка</div>
-                        <p>Лучшие цены на продукции</p>
-                        <p>Благодаря крупным объемам производства мы даем лучшие цены на нашу продукцию</p>
+                    <div className="containerSection">
+                        <div className="containerImg">
+                            <img src="../../public/img/cupIco.png"></img>
+                        </div>
+                        <div>
+                            <p className="contHeader">Всегда свежая обжарка</p>
+                            <p className="text">Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка</p>
+                        </div>
+                        
                     </div>
-                    <div>
-                        <div>картинка</div>
-                        <p>Консультации 24/7</p>
-                        <p>Наши специалисты готовы всегда помочь и подсказать вам с выбором кофе или другой продукции.</p>
+                    <div className="containerSection">
+                        <div className="containerImg">
+                            <img src="../../public/img/cupIco.png"></img>
+                        </div>
+                        <div>
+                            <p className="contHeader">Всегда свежая обжарка</p>
+                            <p className="text">Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка</p>
+                        </div>
+                        
                     </div>
             </div>
+        </div>
         </div>
 
         <div className='PrompContainerBot'>
@@ -44,9 +62,66 @@
 </template>
 
 <style>
-    .PromoContainerTop{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+.PromoContainer{
+    width:  100% ;
+    margin-top: -150px;
+    /* background-color: rgb(255, 247, 225); */
+}
+
+    .heading{
+        margin-right: 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
     }
+
+    .PromoContainerTop{
+        
+        display: flex;
+        
+        align-items: center;
+        background-color: rgb(255, 247, 225);
+    }
+    .PromoContainerTop>div{
+        display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 80%;
+    }
+    .PromoContainerTop>div>img{
+        width: 370px
+    }
+
+    .containerImg{
+    background-color: rgb(249, 179, 0);
+    width:  50px ;
+    height:  50px ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 25px;
+    }
+
+    .containerImg>img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .containerSection{
+        display: -webkit-inline-box;
+    }
+
+    .contHeader{
+        font-family: Ubuntu, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    
 </style>
+<!--     width: 370px; -->

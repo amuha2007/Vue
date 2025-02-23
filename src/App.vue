@@ -4,7 +4,7 @@
       <Navigation/>
     </header>
 
-    <div className="Container" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div >
         <MainPage/>
     </div>
 
@@ -15,11 +15,7 @@
 
 
 <style>
-  #app{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  
 
   
 </style>
