@@ -1,6 +1,10 @@
 <script>
     export default{
-
+        methods:{
+            scrollUp:()=>{
+                window.scrollTo()
+            }
+        }
     }
 </script>
 
@@ -17,7 +21,7 @@
                     <p>Блог</p>
                     <p>Контакты</p>
                 </div>
-                <div className="ScrollUp">
+                <div className="ScrollUp" v-on:click="scrollUp">
                     scrollup
                 </div>
             </div>
