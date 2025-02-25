@@ -1,10 +1,17 @@
 <script>
     export default{
+        
         methods:{
             scrollUp:()=>{
-                window.scrollTo()
+                window.scroll({
+                    top: 'to',
+                    left: 0,
+                    behavior:'smooth'
+                })
             }
+            
         }
+        
     }
 </script>
 
