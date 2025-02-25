@@ -1,12 +1,19 @@
 
 <template>
     <div >
-        <img src="../../../public/img/blot.png" id="blot">
-        <img src="../../../public/img/coffee-breans&cup2.png" id="cup">
+        <div className="flex">
+            
+            <div>
           <h2 className="Content h2 zind1" >Свежеобжаренный кофе</h2>
           <p className="Content zind1">Кофе Калининградской обжарки из разных стран
             произрастания с доставкой на дом.</p>
           <p className="Content zind1">Мы обжариваем кофе каждые выходные.</p>
+        </div>
+        <div>
+                <img src="../../../public/img/blot.png" id="blot">
+                <img src="../../../public/img/coffee-breans&cup2.png" id="cup">
+            </div>
+        </div>
           <CatalogsProd/>
           <Cardswithdiscont/>
           <MainPromo/>
@@ -17,6 +24,11 @@
 </template>
 
 <style>
+
+.flex{
+    display: flex;
+    width: 100%;
+}
 
 .zind1{
     position: relative;
@@ -49,7 +61,7 @@
 #cup{
     position: relative;
     z-index: 2;
-    left: 50%;
+    
 }
 </style>
 

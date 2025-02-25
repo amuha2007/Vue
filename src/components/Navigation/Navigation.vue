@@ -60,7 +60,7 @@ import NavigationsLinks from './NavigationLinks/NavigationsLinks.vue';
 <style>
     .Navigation{
         position: relative;
-        z-index: 1;
+        z-index: 100;
         display: flex;
         justify-content: space-around;
         align-items: center;
