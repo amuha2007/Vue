@@ -6,7 +6,7 @@ const data={
             pictPeople:['../../public/img/InsagrammAvatars/1.jpg','../../public/img/InsagrammAvatars/2.jpg','../../public/img/InsagrammAvatars/3.jpg','../../public/img/InsagrammAvatars/4.jpg','../../public/img/InsagrammAvatars/5.jpg','../../public/img/InsagrammAvatars/6.jpg','../../public/img/InsagrammAvatars/7.jpg','../../public/img/InsagrammAvatars/8.jpg','../../public/img/InsagrammAvatars/9.jpg','../../public/img/InsagrammAvatars/10.jpg','../../public/img/InsagrammAvatars/11.jpg','../../public/img/InsagrammAvatars/12.jpg']
         }
 
-console.log(data);
+
 </script>
 
 <template>
