@@ -1,6 +1,6 @@
 
 <template>
-    <div >
+    <div className="mainPage" >
         <div className="flex">
             
             <div>
@@ -24,7 +24,9 @@
 </template>
 
 <style>
-
+.mainPage{
+    overflow: hidden;
+}
 .flex{
     display: flex;
     width: 100%;
@@ -48,6 +50,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .h2{
