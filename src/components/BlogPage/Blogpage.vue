@@ -1,6 +1,7 @@
 <script>
 export default{
     components:[],
+
     data(){
         return{
             BlogMenuItems:[
@@ -119,6 +120,9 @@ export default{
 ]
         }
     }
+
+
+    
 }
 
 
@@ -126,6 +130,17 @@ export default{
 </script>
 
 <style>
+
+.active{
+    background-color: #FFF7E1 !important;
+    border-radius: 5px;
+    border: solid 1px #F9B300 !important;
+    /* height: 30px;
+    color: #F9B300;
+    font-family: Gilroy;
+    width: 100%;
+    margin: 5px; */
+}
     .BlogMenu{
         display: flex;
         flex-direction: column;
@@ -184,7 +199,7 @@ export default{
     <div>
         <div className="BlogMenu">
             <div className="BlogMenuTop">
-                <p>Обучение</p>
+                <p className="active">Обучение</p>
                 <p>Новости</p>
                 <p>Частые вопросы</p>
             </div>

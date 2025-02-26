@@ -6,8 +6,8 @@
 
 <template>
     <div className="Links">
-        <p>Главная</p>
-        <p>Блог</p>
+        <RouterLink to="/">Главная</RouterLink>
+        <RouterLink to="Blog">Блог</RouterLink>
         <p>Контакты</p>
     </div>
     
@@ -19,7 +19,7 @@
 
     }
 
-    .Links>p{
+    .Links>p,a{
         margin-left: 10px;
         margin-right: 10px;
         cursor: pointer;

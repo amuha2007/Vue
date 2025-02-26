@@ -4,17 +4,25 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from './components/MainPage/MainPage.vue'
+import BlogPage from './components/BlogPage/Blogpage.vue'
 
-createRouter({
+
+
+const router = createRouter({
     history:createWebHistory(),
     routes:[
         {
             name:'Home',
-            patch:'/',
+            path:'/',
             component: MainPage
+        },
+        {
+            name:'BlogP',
+            path:'/Blog',
+            component: BlogPage
         }
 
     ]
 })
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')

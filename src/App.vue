@@ -1,12 +1,16 @@
 
 <template>
+  
     <header>
       <Navigation/>
     </header>
-
-    <div >
+    
+      <!-- <div >
         <MainPage/>
-    </div>
+        
+    </div> -->
+    <RouterView></RouterView>
+    
 
     <footer>
       <FooterContainer/>
