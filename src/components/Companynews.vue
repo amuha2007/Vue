@@ -1,40 +1,23 @@
 <script setup>
+    import dataNews from '@/data/dataNews';
+    console.log(dataNews);
     
-
     
-            let news=[
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.',
-                img:'../../public/img/NewsCompanyImg.png'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.',
-                img:'../../public/img/NewsCompanyImg.png'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.',
-                img:'../../public/img/NewsCompanyImg.png'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.'},
-                {header:'Танзанийский кофе. Откуда он взялся и почему мы его так любим?',
-                img:'../../public/img/NewsCompanyImg.png',
-                text:'Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.'},
-            ]   
+    
         
     
+
 </script>
 
 <template>
     <div className="CompanyNewsHeader">
         <h3>Новости компании</h3>
-        <a>Читать все</a>
+        <a href="/Blog">Читать все</a>
     </div>
     <div className="CompanyNewsContent">
         <div className="CompanyNewsCards">
             
-            <div v-for="(item,index) in news" className="CompanyNewsCard">
+            <div v-for="(item,index) in dataNews" className="CompanyNewsCard">
 
 
                 <div className="CompanyNewsCardContent" v-if="(index<=3)">
@@ -43,8 +26,8 @@
                     <a >Подробнее</a>
                     
                 </div>
-                <div v-if="index<=3 && item.img">
-                    <img  :src=item.img className="img" >
+                <div v-if="(index<=3 && item.img)">
+                    <img  :src=item.img className="img" />
                 </div>
                 
             </div>
@@ -56,8 +39,16 @@
 <style>
 
 .CompanyNewsCardContent{
-    padding: 10px;
-    min-width: 200px;
+    display: flex; 
+    height: auto;
+    min-width: 220px;
+    border-radius: 15px;
+    flex-direction: column;
+    position: relative;
+
+}
+.CompanyNewsCardContent>h4, p {
+    margin-left: 10px;
 }
 
     .CompanyNewsContent{
@@ -77,7 +68,7 @@
     .CompanyNewsCards{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         
     }
 
