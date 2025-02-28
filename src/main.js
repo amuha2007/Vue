@@ -5,6 +5,7 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from './components/MainPage/MainPage.vue'
 import BlogPage from './components/BlogPage/Blogpage.vue'
+import ContactsPage from './ContactsPage/ContactPage.vue'
 
 
 
@@ -20,6 +21,11 @@ const router = createRouter({
             name:'BlogP',
             path:'/Blog',
             component: BlogPage
+        },
+        {
+            name:'Contacts',
+            path:'/Contacts',
+            component: ContactsPage
         }
 
     ]

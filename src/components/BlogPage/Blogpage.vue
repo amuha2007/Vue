@@ -1,124 +1,157 @@
-<script>
-export default{
-    components:[],
+<template>
+    <div>
+        <div className="BlogMenu">
+            <div className="BlogMenuTop">
+                <p @click="setActiveTab('Обучение')" :class="{active: activeTab==='Обучение'}">Обучение</p>
+                <p @click="setActiveTab('Новости')" :class="{active: activeTab==='Новости'}">Новости</p>
+                <p @click="setActiveTab('Частые вопросы')" :class="{active: activeTab==='Частые вопросы'}">Частые вопросы</p>
+            </div>
+            <div className="BlogMenuBot">
+                <p>Приготовление разными способами</p>
 
+                <div className="blogMenuBotItems">
+                    <div v-for="(el, index) in BlogMenuItems" :key="index" className="blogMenuBotItem">
+                        <p>{{ el.name }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</template>
+
+<script >
+
+export default{
+    
+    components:[],
+    methods:{
+        setActiveTab(tab){
+            this.activeTab=tab;
+        }
+
+    },
     data(){
         return{
-            BlogMenuItems:[
-    {
-        name:'Турка',
-        img:'', 
-        header:'Как сварить кофе в турке:', 
-        text:'Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития. Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития. Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.',
-        theme:[
-            {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-            ]
-        },
-    {
-        name:'Френч-пресс',
-        img:'',
-        header:'Как сварить кофе в френч-прессе:',
-        text:'какой-то текст типа Френч-Пресс',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Мока',
-        img:'',
-        header:'Как сварить кофе в Моке:',
-        text:'какой-то текст типа Мока',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Эспрессо',
-        img:'',
-        header:'Как сварить Эспрессо:',
-        text:'какой-то текст типа Эспрессо',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Воронка',
-        img:'',
-        header:'Как сварить кофе в Воронке:',
-        text:'какой-то текст типа Воронка',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Аэропресс',
-        img:'',
-        header:'Как сварить кофе в Аэропресс:',
-        text:'какой-то текст типа Аэропресс',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Чашка',
-        img:'',
-        header:'Как сварить кофе в Чашке:',
-        text:'какой-то текст типа Чашка',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    },
-    {
-        name:'Автомат',
-        img:'',
-        header:'Как сварить кофе в Автомате:',
-        text:'какой-то текст типа Автомат',
-        theme:[
-        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''},
-            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
-                ,img:''}
-        ]
-    }
-]
+                activeTab:'Обучение',
+
+                BlogMenuItems:[
+                    {
+                        name:'Турка',
+                        img:'', 
+                        header:'Как сварить кофе в турке:', 
+                        text:'Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития. Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития. Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.',
+                        theme:[
+                            {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                            ]
+                        },
+                    {
+                        name:'Френч-пресс',
+                        img:'',
+                        header:'Как сварить кофе в френч-прессе:',
+                        text:'какой-то текст типа Френч-Пресс',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Мока',
+                        img:'',
+                        header:'Как сварить кофе в Моке:',
+                        text:'какой-то текст типа Мока',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Эспрессо',
+                        img:'',
+                        header:'Как сварить Эспрессо:',
+                        text:'какой-то текст типа Эспрессо',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Воронка',
+                        img:'',
+                        header:'Как сварить кофе в Воронке:',
+                        text:'какой-то текст типа Воронка',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Аэропресс',
+                        img:'',
+                        header:'Как сварить кофе в Аэропресс:',
+                        text:'какой-то текст типа Аэропресс',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Чашка',
+                        img:'',
+                        header:'Как сварить кофе в Чашке:',
+                        text:'какой-то текст типа Чашка',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    },
+                    {
+                        name:'Автомат',
+                        img:'',
+                        header:'Как сварить кофе в Автомате:',
+                        text:'какой-то текст типа Автомат',
+                        theme:[
+                        {nameTheme:'Название темы 1',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 2',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''},
+                            {nameTheme:'Название темы 3',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum arcu lorem, vel hendrerit tortor finibus in. Duis orci ipsum, gravida et metus sit amet, mollis vehicula turpis. Suspendisse vitae dictum orci. Curabitur at ex tincidunt, ultrices quam id, pharetra mauris. In sit amet felis eget magna mattis hendrerit. Vestibulum'
+                                ,img:''}
+                        ]
+                    }
+                ]
         }
+        
     }
 
 
@@ -127,20 +160,26 @@ export default{
 
 
 
+
+
 </script>
+
+
+
+
 
 <style>
 
-.active{
-    background-color: #FFF7E1 !important;
-    border-radius: 5px;
-    border: solid 1px #F9B300 !important;
-    /* height: 30px;
-    color: #F9B300;
-    font-family: Gilroy;
-    width: 100%;
-    margin: 5px; */
-}
+    .active{
+        background-color: #FFF7E1 !important;
+        border-radius: 5px;
+        border: solid 1px #F9B300 !important;
+        /* height: 30px;
+        color: #F9B300;
+        font-family: Gilroy;
+        width: 100%;
+        margin: 5px; */
+    }
     .BlogMenu{
         display: flex;
         flex-direction: column;
@@ -194,26 +233,3 @@ export default{
     }
 
 </style>
-
-<template>
-    <div>
-        <div className="BlogMenu">
-            <div className="BlogMenuTop">
-                <p className="active">Обучение</p>
-                <p>Новости</p>
-                <p>Частые вопросы</p>
-            </div>
-            <div className="BlogMenuBot">
-                <p>Приготовление разными способами</p>
-
-                <div className="blogMenuBotItems">
-                    <div v-for="(el, index) in BlogMenuItems" :key="index" className="blogMenuBotItem">
-                        <p>{{ el.name }}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</template>

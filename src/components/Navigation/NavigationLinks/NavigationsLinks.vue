@@ -8,7 +8,7 @@
     <div className="Links">
         <RouterLink to="/">Главная</RouterLink>
         <RouterLink to="Blog">Блог</RouterLink>
-        <p>Контакты</p>
+        <RouterLink to="Contacts">Контакты</RouterLink>
     </div>
     
 </template>

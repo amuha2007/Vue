@@ -4,11 +4,7 @@
     <header>
       <Navigation/>
     </header>
-    
-      <!-- <div >
-        <MainPage/>
-        
-    </div> -->
+
     <RouterView></RouterView>
     
 
