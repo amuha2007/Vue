@@ -1,51 +1,39 @@
-<script>
-import FAQ from '../../../data/FAQ'
-export default{
-  components:{},
-  methods:{
+<script setup>
+import { ref } from 'vue';
+import FAQ from '../../../data/FAQ';
 
-    questionClick(event){
-        console.log(event);
-    }
+const faqList = ref(FAQ.map(item => ({ ...item, state: false })));
 
-  },
-  data(){
-    
-    
-    return{
-       
-
-    state:true,
-    faq:FAQ    
-        
-    }
-
-    
-  }
+const questionClick = (el) => {
+    el.state = !el.state;
 }
 </script>
 
-
-
 <template>
     <img src="../../../../public/img/Vector.png" style="width: -webkit-fill-available;position: relative;top: 15px;">
-    <div className="FAQ">
-            
-            <img src="../../../../public/img/CoffeeCornsWithCup2.png" className='FAQimg'/>
-            <div className="FAQcontent">
-                <div v-for="(el,index) in faq">
-                    
-                    <p className="FaqQuestion" v-on:click="questionClick(event)">{{ el.question }}</p>
-                    <div className="FaqAnswer">{{ el.answer }}</div>
-                </div>
+    <div class="FAQ">
+        <img src="../../../../public/img/CoffeeCornsWithCup2.png" class='FAQimg' />
+        <div class="FAQcontent">
+            <div v-for="(el, index) in faqList" :key="index">
+                <p class="FaqQuestion" @click="questionClick(el)">{{ el.question }}</p>
+                <div v-if="el.state" class="FaqAnswer">{{ el.answer }}</div> 
             </div>
-            
+        </div>
     </div>
     <img src="../../../../public/img/Vector.png" style="transform: rotate(180deg); width: -webkit-fill-available;">
 </template>
 
 <style>
-
+.FaqAnswer{
+        
+        height: fit-content;
+        transition: 1s;
+        box-shadow: black 0px 1px 5px;
+        border-radius: 10px;
+        padding: 8px;
+        margin-bottom: 5px;
+        background-color: white;
+    }
     .FaqQuestion{
         display: flex;
         height: fit-content;
@@ -80,17 +68,9 @@ export default{
         margin-right: 50px;
         position: relative;
         z-index: 10;
+        cursor: pointer;
         
     }
 
-    .FaqAnswer{
-        transition: 1s;
-        height: fit-content;
-    transition: 1s;
-    box-shadow: black 0px 1px 5px;
-    border-radius: 10px;
-    padding: 8px;
-    margin-bottom: 5px;
-    background-color: white;
-    }
+    
 </style>
