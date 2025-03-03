@@ -51,8 +51,9 @@ import NavigationsLinks from './NavigationLinks/NavigationsLinks.vue';
                     <img src='../../../public/img/SearchBlack.png' alt="" v-on:click="searchOpen">
 
                 </div>
-                <img src='../../../public/img/corzine.png' alt="">
-                <img src='../../../public/img/people.png' alt="">
+                    <RouterLink to="Basket"><img src='../../../public/img/corzine.png' alt=""></RouterLink>
+                    
+                    <a><img src='../../../public/img/people.png' alt=""></a>
             </div>
     </div>
 </template>
@@ -78,6 +79,14 @@ import NavigationsLinks from './NavigationLinks/NavigationsLinks.vue';
     }
 
     .searchIcoCintainer>img{
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 4px;
+    }
+
+    .NavMenu>a>img{
         width: 20px;
         height: 20px;
         margin-left: 5px;

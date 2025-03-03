@@ -6,6 +6,7 @@ const faqList = ref(FAQ.map(item => ({ ...item, state: false })));
 
 const questionClick = (el) => {
     el.state = !el.state;
+    
 }
 </script>
 
@@ -17,6 +18,7 @@ const questionClick = (el) => {
             <div v-for="(el, index) in faqList" :key="index">
                 <p class="FaqQuestion" @click="questionClick(el)">{{ el.question }}</p>
                 <div v-if="el.state" class="FaqAnswer">{{ el.answer }}</div> 
+                <!-- через v-if верхний сделать разные классы , где будет размер и транзишн -->
             </div>
         </div>
     </div>

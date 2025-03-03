@@ -1,6 +1,6 @@
 <script setup>
     import dataNews from '@/data/dataNews';
-    console.log(dataNews);
+    
     
     
     
@@ -63,6 +63,9 @@
         align-content: center;
         align-items: center;
         justify-content: space-between;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .CompanyNewsCards{

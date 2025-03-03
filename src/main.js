@@ -5,7 +5,8 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from './components/MainPage/MainPage.vue'
 import BlogPage from './components/BlogPage/Blogpage.vue'
-import ContactsPage from './ContactsPage/ContactPage.vue'
+import ContactPage from './components/ContactsPage/ContactPage.vue'
+import BasketPage from './components/BasketPage/BasketPage.vue'
 
 
 
@@ -25,7 +26,12 @@ const router = createRouter({
         {
             name:'Contacts',
             path:'/Contacts',
-            component: ContactsPage
+            component: ContactPage
+        },
+        {
+            name:'Basket',
+            path:'/Basket',
+            component: BasketPage
         }
 
     ]

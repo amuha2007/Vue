@@ -6,6 +6,10 @@ const data={
             pictPeople:['../../public/img/InsagrammAvatars/1.jpg','../../public/img/InsagrammAvatars/2.jpg','../../public/img/InsagrammAvatars/3.jpg','../../public/img/InsagrammAvatars/4.jpg','../../public/img/InsagrammAvatars/5.jpg','../../public/img/InsagrammAvatars/6.jpg','../../public/img/InsagrammAvatars/7.jpg','../../public/img/InsagrammAvatars/8.jpg','../../public/img/InsagrammAvatars/9.jpg','../../public/img/InsagrammAvatars/10.jpg','../../public/img/InsagrammAvatars/11.jpg','../../public/img/InsagrammAvatars/12.jpg']
         }
 
+const buttonClick=()=>{
+    console.log('click');
+}
+
 
 </script>
 
@@ -20,7 +24,8 @@ const data={
                         <img src="../../public/img/айфон 1.png" className="instPhone" id="Iph1">
                         <img src="../../public/img/айфон 2.png" className="instPhone" id="Iph2">
                         
-            <div className="couruselButton"><img src="../../public/img/ArrowRightOrange.png"></div>
+            <div className="couruselButton">
+                <img src="../../public/img/ArrowRightOrange.png" v-on:click="buttonClick()"></div>
             <div className="instCourusel">
                 <div className="instCouruselTop">
                     <div v-for="(img, index) in data.pictPeople" >
@@ -56,7 +61,9 @@ const data={
     left: 910px;
     top: 244px;
     cursor: pointer;
+    z-index: 100;
 }
+
 
 .contantContainer{
     position: relative;
@@ -96,6 +103,7 @@ const data={
 .instPhone{
     width: 500px;
     position: absolute;
+    z-index: 100;
 
 }
 #Iph1{

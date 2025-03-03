@@ -56,6 +56,9 @@
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
+    
+    color: black !important;
+    
     }
 
     .Catalogs{

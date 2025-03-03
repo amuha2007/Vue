@@ -1,7 +1,7 @@
 <script setup>
 
 import Card from './Card.vue';
-import AllTovarData from './AllTovarData/AllTovarData';
+import AllTovarData from '../data/AllTovarData/AllTovarData';
 
 
 

@@ -24,12 +24,15 @@
 </template>
 
 <style>
+
+
 .mainPage{
     overflow: hidden;
 }
 .flex{
     display: flex;
     width: 100%;
+    
 }
 
 .zind1{
