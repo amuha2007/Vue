@@ -18,6 +18,9 @@ import AllTovarData from '../data/AllTovarData/AllTovarData';
         return filtered
 }
 
+let lastCard=itemsWithDiscount()[length].tovars;
+console.log(lastCard);
+
 
 </script>
 
@@ -31,7 +34,7 @@ import AllTovarData from '../data/AllTovarData/AllTovarData';
         <div className="Corusel">
         <div v-for="(data, index) in itemsWithDiscount() ">
         
-        <div v-if="(data.key === 'coffee')">
+        
             
                 <div v-for="(data2) in data.tovars">
                     
@@ -41,15 +44,7 @@ import AllTovarData from '../data/AllTovarData/AllTovarData';
 
                 
                 
-        </div>
-
-        <div v-else > 
-            <div v-for="(data2) in data.tovars">
-                
-                
-                <Card :data="data2"/>
-            </div>
-        </div>
+       
     </div>
 </div> 
         <button className="buttonCorusel"><img src="../../public/img/ArrowRight.png"></button>

@@ -38,7 +38,7 @@ const props=defineProps({
 
         <div className="CardParams">
 
-            <div className="cardDivForImg">
+            <div className="cardDivForImgCoffee">
             <img :src="props.data.img">
         </div>
 
@@ -102,7 +102,7 @@ const props=defineProps({
         
     </div>
 
-
+    
     <div v-else className="Card">
         <div v-if="props.data.discount" className="procentsCircle">%</div>
 
@@ -122,14 +122,22 @@ const props=defineProps({
             
         </div>
 
-
-
-        <p>{{ props.data.name }}</p>
-        
-
         <div className="cardDivForImg">
             <img :src="props.data.img">
         </div>
+
+        <p>{{ props.data.name }}</p>
+        
+        <p className="cardDescription">{{ props.data.description }}</p>
+
+        <div className="CardPrice">
+            <div className="PriceContainer">
+                <p className="newPrice">{{ props.data.price }}</p>
+                <p className="oldPrice">{{ props.data.oldprice }}</p>
+            </div>
+            <button className="cardButton">В корзину</button>
+        </div>
+        
 
     </div>
 
@@ -187,19 +195,41 @@ const props=defineProps({
     }
 
     .cardDivForImg{
-        
         display: flex;
-        
-        height: 215px;
+        justify-content: center;
+        border-radius: 30px;
+        width: 160px;
+        margin-left: 35px;
+        overflow: hidden;
         /* 30% */
     }
 
+    .cardDivForImgCoffee{
+        display: flex;
+        justify-content: center;
+        border-radius: 50px;
+        width: 130px;
+        overflow: hidden;
+    }
+    .cardDivForImgCoffee>img{
+        
+        display: flex;
+        justify-content: center;
+        height: 215px;
+    }
+
+    .cardDivForImg>img{
+        
+        display: flex;
+        justify-content: center;
+        height: 215px;
+    }
     .ItemsStars{
         display: flex;
         position: relative;
-    left: 120px;
-    top: -40px;
-    width: fit-content;
+        left: 120px;
+        top: -40px;
+        width: fit-content;
     }
 
     #itemStar{
