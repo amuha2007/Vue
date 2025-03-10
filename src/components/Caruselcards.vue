@@ -2,24 +2,24 @@
 
 import Card from './Card.vue';
 import AllTovarData from '../data/AllTovarData/AllTovarData';
+import { computed } from 'vue';
 
 
+const itemsWithDiscount = computed(()=>{
+    return Object.values(AllTovarData).flatMap(category => 
+    category.filter(item => item.discount)
+);
+
+    
+});
 
 
-    function itemsWithDiscount(){
-    const tovarsKeys=Object.keys(AllTovarData);
-        const filtered=tovarsKeys.map((key)=>{
-            // console.log(key);
-            let TovarsDiscount = AllTovarData[key].filter((item)=>{return item.discount})
-            
-            return {key:key,tovars:TovarsDiscount}
-        })
-        // console.log(filtered);
-        return filtered
-}
+const itemsWithDiscountAll=itemsWithDiscount.value;
+console.log(itemsWithDiscountAll);
+const totalItems = computed(() => {
+  return itemsWithDiscount.value.length; // Просто возвращаем длину массива
+});
 
-let lastCard=itemsWithDiscount()[length].tovars;
-console.log(lastCard);
 
 
 </script>
@@ -32,19 +32,16 @@ console.log(lastCard);
         <button className="buttonCorusel"><img src="../../public/img/ArrowLeft.png"></button>
 
         <div className="Corusel">
-        <div v-for="(data, index) in itemsWithDiscount() ">
-        
+        <div v-for="(data) in itemsWithDiscountAll ">
         
             
-                <div v-for="(data2) in data.tovars">
+        
+            
+                
+                    <div>
+                        <Card :data="data"/>
+                    </div>
                     
-
-                    <Card :data="data2"/>
-                </div>
-
-                
-                
-       
     </div>
 </div> 
         <button className="buttonCorusel"><img src="../../public/img/ArrowRight.png"></button>

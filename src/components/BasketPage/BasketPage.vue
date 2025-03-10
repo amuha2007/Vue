@@ -3,10 +3,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import {  ref } from 'vue';
 
-    let basketItems=ref([]);
+    let basket=ref([]);
 
+    
 
 </script>
 

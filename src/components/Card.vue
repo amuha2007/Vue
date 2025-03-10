@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue';
+
+
 
 
 const props=defineProps({
@@ -6,12 +9,12 @@ const props=defineProps({
         data:{}
     })
 
-    
+    console.log(props.data);
 
     let dataStars=Number(props.data.stars);
     let CoffeeStrenght=Number(props.data.coffeeStrength)
     
-
+    
 </script>
 
 <template>
@@ -96,7 +99,7 @@ const props=defineProps({
                 <p className="newPrice">{{ props.data.price }}</p>
                 <p className="oldPrice">{{ props.data.oldprice }}</p>
             </div>
-            <button className="cardButton">В корзину</button>
+            <button className="cardButton" @click="basket.push(props)">В корзину</button>
         </div>
         
         
