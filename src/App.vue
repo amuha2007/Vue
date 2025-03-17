@@ -5,7 +5,10 @@
       <Navigation/>
     </header>
 
-    <RouterView></RouterView>
+    <body>
+      <RouterView></RouterView>
+    </body>
+    
     
 
     <footer>
@@ -16,7 +19,9 @@
 
 <style>
   
-
+header{
+  background: linear-gradient(180deg, #f3f3f3, #eaeaea);
+}
   
 </style>
 
