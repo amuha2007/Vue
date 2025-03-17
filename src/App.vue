@@ -22,6 +22,9 @@
 header{
   background: linear-gradient(180deg, #f3f3f3, #eaeaea);
 }
+body{
+  margin: 0px;
+}
   
 </style>
 
