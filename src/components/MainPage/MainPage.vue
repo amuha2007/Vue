@@ -1,6 +1,6 @@
 <script setup>
 
-let activLink=1;
+let activLink=0;
 
 const NavData=[
     {name:'Ремонт и техническое обслуживание аппаратов высокого давления и оборудования для клининга.', content:'контент1'},
@@ -15,39 +15,59 @@ const NavData=[
 
 <template>
     <div className="Main">
-        <div className="MainNavigation">
+        <div className="MainPromo">
+            <img src="../../../public/img/PromoImg.png">
+        </div>
+        <div className="MainContent">
+            
+            <div className="MainNavigation">
             Nav
             <div v-for="(data,index) in NavData">
                 <p>{{ data.name }}</p>
             </div>
         </div>
-        <div className="MainContent">
+        <div className="MainText">
             MainContent
             <div v-for="(data,index) in NavData">
                 <div v-if="index==activLink">{{ data.content }}</div>
             </div>
-        </div>
+        </div></div>
+        
 
     </div>
 </template>
 
 <style>
 .Main{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    
+    width: 100%;
 }
 
+.MainPromo{
+    display: flex;
+    justify-content: center;
+
+}
+.MainPromo>img{
+    width: 95%;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+
+.MainText{
+    width: 65%;
+}
 .MainNavigation{
     width: 35%;
     border: solid 1px black;
 }
 
 .MainContent{
-    width: 65%;
+    width: 80%;
     border: solid 1px black;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 
 </style>
