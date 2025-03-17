@@ -13,11 +13,18 @@
 
 <template>
         <div className="Footer">
-            Футер
+            <p>контакты</p>
+            <p>адрес</p>
+            <p>местоположение</p>
         </div>
 </template>
 
 <style>
 
+.Footer{
+    display: flex;
+    justify-content: space-around;
+
+}
 
 </style>
