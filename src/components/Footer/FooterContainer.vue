@@ -31,7 +31,7 @@
 .Footer{
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(180deg, #f3f3f3, #eaeaea);
+    background: linear-gradient(180deg, #f3f3f3, #b9b9b9);
 
 }
 

@@ -20,7 +20,7 @@
 <style>
   
 header{
-  background: linear-gradient(180deg, #f3f3f3, #eaeaea);
+  background: linear-gradient(180deg, #d7d7d7, #f3f3f3);
 }
 body{
   margin: 0px;

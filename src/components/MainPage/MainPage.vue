@@ -1,6 +1,7 @@
 <script setup>
+import { ref } from 'vue';
 
-let activLink=0;
+let activLink= ref(0);
 
 const NavData=[
     {name:'Ремонт бензорезов',
@@ -14,6 +15,10 @@ const NavData=[
 
 ];
 
+let NavClick=(index)=>{
+    activLink.value=index;
+}
+
 </script>
 
 <template>
@@ -26,17 +31,17 @@ const NavData=[
             <div className="MainNavigation">
             
             <div v-for="(data,index) in NavData" className="MainNavItem">
-                <p>{{ data.name }}</p>
+                <p @click="NavClick(index)">{{ data.name }}</p>
             </div>
         </div>
         <div className="MainText">
             
-            <div v-for="(data,index) in NavData">
-                <div v-if="index==activLink">
-                    <p>{{ data.content }}</p>
-                    <img :src="data.img">
+            
+                <div v-if="NavData[activLink]">
+                    <p>{{ NavData[activLink].content }}</p>
+                    <img :src="NavData[activLink].img" alt="Content Image">
                 </div>
-            </div>
+            
         </div></div>
         
 
@@ -66,7 +71,7 @@ const NavData=[
 }
 
 .MainNavItem>p:hover{
-    box-shadow: 0px 0px 6px #3a66a3;
+    box-shadow: 0px 0px 6px #255dad;
 }
 
 .MainContent{
