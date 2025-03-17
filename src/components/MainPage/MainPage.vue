@@ -42,6 +42,10 @@ const NavData=[
     width: 100%;
 }
 
+.MainContent{
+    margin-top: 10px;
+}
+
 .MainPromo{
     display: flex;
     justify-content: center;
@@ -58,6 +62,7 @@ const NavData=[
     width: 65%;
 }
 .MainNavigation{
+    
     width: 35%;
     border: solid 1px black;
 }
