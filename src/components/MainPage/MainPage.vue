@@ -3,6 +3,9 @@
 let activLink=0;
 
 const NavData=[
+    {name:'Ремонт бензорезов',
+        content:'Наша мастерская одна из не многих может выполнить качественный и недорогой ремонт бензореза. Для выполнения этой работы у нас имеются все необходимые навыки и практические умения, позволяющие оперативно находить неисправности и эффективно устранять их. За многолетний стаж работы было досконально изучено огромное количество моделей техники от различных производителей.',
+    img:'../../../public/img/Benzorez.png'},
     {name:'Ремонт и техническое обслуживание аппаратов высокого давления и оборудования для клининга.', content:'контент1'},
     {name:'Ремонт и техническое обслуживание виброплит, промышленных генераторов, резчиков швов, МШМ, раздельщиков трещин, резчиков кровли, многодисковых резчиков, затирочных машин', content:'контент2'},
     {name:'Ремонт и техническое обслуживание электроинструмента: ушм, полировальных машин, дрелей, перфораторов, отбойных молотков, аккумуляторного оборудования и инструмента. ', content:'контент3'},
@@ -21,15 +24,18 @@ const NavData=[
         <div className="MainContent">
             
             <div className="MainNavigation">
-            Nav
-            <div v-for="(data,index) in NavData">
+            
+            <div v-for="(data,index) in NavData" className="MainNavItem">
                 <p>{{ data.name }}</p>
             </div>
         </div>
         <div className="MainText">
-            MainContent
+            
             <div v-for="(data,index) in NavData">
-                <div v-if="index==activLink">{{ data.content }}</div>
+                <div v-if="index==activLink">
+                    <p>{{ data.content }}</p>
+                    <img :src="data.img">
+                </div>
             </div>
         </div></div>
         
@@ -40,6 +46,27 @@ const NavData=[
 <style>
 .Main{
     width: 100%;
+}
+
+.MainNavItem{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    
+}
+
+.MainNavItem>p{
+    padding: 10px;
+    background-color: white;
+    margin: 0px;
+    box-shadow: 0px 0px 6px black;
+    border-radius: 10px;
+    width: -webkit-fill-available;
+}
+
+.MainNavItem>p:hover{
+    box-shadow: 0px 0px 6px #3a66a3;
 }
 
 .MainContent{
@@ -62,14 +89,14 @@ const NavData=[
     width: 65%;
 }
 .MainNavigation{
-    
+    margin-right: 10px;
     width: 35%;
-    border: solid 1px black;
+    cursor: pointer;
 }
 
 .MainContent{
     width: 80%;
-    border: solid 1px black;
+    
     margin-left: auto;
     margin-right: auto;
     display: flex;
